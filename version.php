@@ -55,7 +55,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'mod_aiquiz';
-$plugin->version   = 2026072300230;
+$plugin->version   = 2026072300;
 $plugin->requires  = 2022041900;   // Moodle 4.0+ (tested)
 $plugin->supported = [400, 405];   // Moodle 4.0 to 4.5 (verified compatible)
 $plugin->maturity  = MATURITY_STABLE;
