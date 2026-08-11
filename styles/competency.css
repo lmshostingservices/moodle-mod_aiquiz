@@ -1,0 +1,266 @@
+/**
+ * AI Quiz Maker — Competency Picker Styles
+ * RTO/TGA integration UI styling
+ */
+
+.aiq-competency-picker {
+    padding: var(--aiq-space-md, 16px);
+}
+
+.aiq-cp-search {
+    margin-bottom: var(--aiq-space-lg, 24px);
+}
+
+.aiq-cp-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--aiq-text, #1e293b);
+    margin-bottom: var(--aiq-space-xs, 8px);
+}
+
+.aiq-cp-search-row {
+    display: flex;
+    gap: var(--aiq-space-sm, 12px);
+}
+
+.aiq-cp-input {
+    flex: 1;
+    max-width: 200px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-family: var(--aiq-font-mono, 'JetBrains Mono', monospace);
+    text-transform: uppercase;
+    border: 1px solid var(--aiq-border, #e2e8f0);
+    border-radius: var(--aiq-radius-md, 8px);
+    background: var(--aiq-surface, #fff);
+    color: var(--aiq-text, #1e293b);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.aiq-cp-input:focus {
+    outline: none;
+    border-color: var(--aiq-primary, #3b82f6);
+    box-shadow: 0 0 0 3px var(--aiq-primary-light, rgba(59, 130, 246, 0.15));
+}
+
+.aiq-cp-hint {
+    font-size: 12px;
+    color: var(--aiq-text-muted, #64748b);
+    margin: var(--aiq-space-xs, 8px) 0 0 0;
+}
+
+.aiq-cp-loading {
+    display: flex;
+    align-items: center;
+    gap: var(--aiq-space-sm, 12px);
+    padding: var(--aiq-space-md, 16px);
+    color: var(--aiq-text-muted, #64748b);
+}
+
+.aiq-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--aiq-border, #e2e8f0);
+    border-top-color: var(--aiq-primary, #3b82f6);
+    border-radius: 50%;
+    animation: aiq-spin 0.6s linear infinite;
+}
+
+@keyframes aiq-spin {
+    to { transform: rotate(360deg); }
+}
+
+.aiq-cp-error {
+    padding: var(--aiq-space-sm, 12px) var(--aiq-space-md, 16px);
+    background: var(--aiq-danger-light, #fee2e2);
+    color: var(--aiq-danger, #ef4444);
+    border-radius: var(--aiq-radius-md, 8px);
+    font-size: 13px;
+}
+
+.aiq-cp-unit-info {
+    padding: var(--aiq-space-5, 1.25rem);
+    background: var(--aiq-bg-card, #fff);
+    border: 1px solid var(--aiq-border-muted, #e5e7eb);
+    border-radius: var(--aiq-radius-lg, 0.75rem);
+    margin-bottom: var(--aiq-space-4, 1rem);
+    box-shadow: var(--aiq-card-shadow, 0 1px 3px rgba(0, 0, 0, 0.04));
+}
+
+.aiq-unit-header {
+    display: flex;
+    align-items: baseline;
+    gap: var(--aiq-space-sm, 12px);
+    flex-wrap: wrap;
+}
+
+.aiq-unit-code {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: var(--aiq-font-mono, 'JetBrains Mono', monospace);
+    color: var(--aiq-primary, #3b82f6);
+}
+
+.aiq-unit-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--aiq-text, #1e293b);
+}
+
+.aiq-unit-desc {
+    font-size: 13px;
+    color: var(--aiq-text-muted, #64748b);
+    margin: var(--aiq-space-sm, 12px) 0 0 0;
+    line-height: 1.5;
+}
+
+.aiq-cp-criteria {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.aiq-criteria-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--aiq-space-md, 16px);
+}
+
+.aiq-criteria-group {
+    background: var(--aiq-bg-card, #fff);
+    border: 1px solid var(--aiq-border-muted, #e5e7eb);
+    border-radius: var(--aiq-radius-lg, 0.75rem);
+    overflow: hidden;
+    box-shadow: var(--aiq-card-shadow, 0 1px 3px rgba(0, 0, 0, 0.04));
+}
+
+.aiq-criteria-group-title {
+    display: flex;
+    align-items: center;
+    gap: var(--aiq-space-xs, 8px);
+    padding: var(--aiq-space-sm, 12px) var(--aiq-space-md, 16px);
+    background: var(--aiq-surface, #f8fafc);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--aiq-text, #1e293b);
+    margin: 0;
+    border-bottom: 1px solid var(--aiq-border, #e2e8f0);
+}
+
+.aiq-criteria-type-badge {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: var(--aiq-radius-sm, 4px);
+    color: #fff;
+}
+
+.aiq-type-performance {
+    background: var(--aiq-primary, #3b82f6);
+}
+
+.aiq-type-knowledge {
+    background: var(--aiq-warning, #f59e0b);
+}
+
+.aiq-criteria-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--aiq-space-sm, 12px);
+    padding: var(--aiq-space-sm, 12px) var(--aiq-space-md, 16px);
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    border-bottom: 1px solid var(--aiq-border-light, #f1f5f9);
+}
+
+.aiq-criteria-item:last-child {
+    border-bottom: none;
+}
+
+.aiq-criteria-item:hover {
+    background: var(--aiq-primary-light, rgba(59, 130, 246, 0.05));
+}
+
+.aiq-criteria-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    cursor: pointer;
+    accent-color: var(--aiq-primary, #3b82f6);
+}
+
+.aiq-criteria-code {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: var(--aiq-font-mono, 'JetBrains Mono', monospace);
+    color: var(--aiq-primary, #3b82f6);
+    min-width: 50px;
+}
+
+.aiq-criteria-text {
+    font-size: 13px;
+    color: var(--aiq-text, #1e293b);
+    line-height: 1.5;
+    flex: 1;
+}
+
+.aiq-cp-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--aiq-space-md, 16px) 0;
+    border-top: 1px solid var(--aiq-border, #e2e8f0);
+    margin-top: var(--aiq-space-md, 16px);
+}
+
+.aiq-cp-selection-count {
+    font-size: 13px;
+    color: var(--aiq-text-muted, #64748b);
+}
+
+.aiq-cp-selection-count span {
+    font-weight: 700;
+    color: var(--aiq-primary, #3b82f6);
+}
+
+.aiq-cp-action-buttons {
+    display: flex;
+    gap: var(--aiq-space-xs, 8px);
+}
+
+.aiq-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--aiq-space-xs, 8px);
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: var(--aiq-radius-md, 8px);
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.aiq-btn-primary {
+    background: var(--aiq-primary, #3b82f6);
+    color: #fff;
+}
+
+.aiq-btn-primary:hover {
+    background: var(--aiq-primary-dark, #2563eb);
+}
+
+.aiq-btn-secondary {
+    background: var(--aiq-surface, #f8fafc);
+    color: var(--aiq-text, #1e293b);
+    border-color: var(--aiq-border, #e2e8f0);
+}
+
+.aiq-btn-secondary:hover {
+    background: var(--aiq-surface-hover, #f1f5f9);
+}
