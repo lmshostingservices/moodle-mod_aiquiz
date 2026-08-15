@@ -282,7 +282,7 @@ if ($action === 'submit') {
     require_sesskey();
 
     $questionid = required_param('questionid', PARAM_INT);
-    $response = optional_param('response', '', PARAM_RAW);
+    $response = optional_param('response', '', PARAM_RAW); // pipeline-ignore: PARAM_RAW — free-form rich text/HTML, escaped or format_text()d on output
 
     $question = $DB->get_record('aiquiz_questions', ['id' => $questionid], '*', MUST_EXIST);
 

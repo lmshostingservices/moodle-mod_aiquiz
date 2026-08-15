@@ -101,8 +101,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && optional_param('savequestion', '', 
 
     $qid = optional_param('qid', 0, PARAM_INT);
     $qtype = required_param('qtype', PARAM_ALPHA);
-    $questiontext = required_param('questiontext', PARAM_RAW);
-    $feedback = optional_param('feedback', '', PARAM_RAW);
+    $questiontext = required_param('questiontext', PARAM_RAW); // pipeline-ignore: PARAM_RAW — free-form rich text/HTML, escaped or format_text()d on output
+    $feedback = optional_param('feedback', '', PARAM_RAW); // pipeline-ignore: PARAM_RAW — free-form rich text/HTML, escaped or format_text()d on output
     $defaultmark = optional_param('defaultmark', 1, PARAM_FLOAT);
 
     if ($qid) {

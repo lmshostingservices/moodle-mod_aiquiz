@@ -55,9 +55,9 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'mod_aiquiz';
-$plugin->version   = 2026072300;
+$plugin->version   = 2026081500;
 $plugin->requires  = 2022041900;   // Moodle 4.0+ (tested)
 $plugin->supported = [400, 405];   // Moodle 4.0 to 4.5 (verified compatible)
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '3.1.26';
+$plugin->release   = '3.1.27'; // FIX-13DIGIT-SAVEPOINT-REBASE: release rebuilt from repo db/upgrade.php with all gates/savepoints on 10-digit values <= $plugin->version; the previously served ZIP still carried legacy 13-digit savepoints that would silently re-strand rebased sites on the next upgrade. No schema/PHP-logic/JS changes. 
 $plugin->dependencies = ['local_aiconfig' => 2025122301];
